@@ -21,7 +21,7 @@ sentences_rdd = sc.parallelize(sentences)
 # Transformation (replace with your own logic)
 transformed = sentences_rdd.map(lambda s: s.upper())
 
-# Save to HDFS (change the path to something you have write access to)
+# Save to HDFS 
 output_path = "hdfs:///tmp/week4_output"
 transformed.saveAsTextFile(output_path)
 spark.stop()
